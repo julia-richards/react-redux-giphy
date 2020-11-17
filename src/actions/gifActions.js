@@ -13,10 +13,13 @@ const receiveGifs = gifs => {
 };
 
 // TODO: Write a thunk action creator
-export const fetchGifs = searchTerm => dispatch => (
-  APIUtil.fetchGifs(searchTerm)
-    .then(res => res.json())
-    .then(res => dispatch(receiveGifs(res.data)))
-);
+export const fetchGifs = searchTerm => dispatch => {
+  console.log("Entered the thunk")
+  return (
+    APIUtil.fetchGifs(searchTerm)
+      .then(res => res.json())
+      .then(res => dispatch(receiveGifs(res.data)))
+  )
+};
 
 export default receiveGifs;

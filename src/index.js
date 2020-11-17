@@ -12,7 +12,7 @@ window.store = store;
 
 ReactDOM.render(
   <React.StrictMode>
-    <Root />
+    <Root store={store} />
   </React.StrictMode>,
   document.getElementById('root')
 );

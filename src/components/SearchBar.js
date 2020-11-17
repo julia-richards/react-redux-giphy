@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
   // TODO: Create an `onSubmit` handler for your search form.
   // TODO: Prevent the default action of a submit event
   // TODO: Dispatch the `fetchGifs` function
-  onSubmit = (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.props.fetchGifs(this.state.inputValue);
   }

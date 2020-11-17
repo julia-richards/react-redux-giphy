@@ -16,7 +16,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     // TODO: Pass `fetchGifs` prop
-    fetchGifs: (searchQuery) => fetchGifs(searchQuery)
+    fetchGifs: (searchQuery) => dispatch(fetchGifs(searchQuery))
   };
 };
 
